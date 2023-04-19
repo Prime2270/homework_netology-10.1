@@ -1,11 +1,11 @@
 
 ### Задание 1 Разверните топологию из лекции и выполните установку и настройку сервиса Keepalived
 
-![kob1](ссылка на скриншот 1)
+![job1](https://github.com/Prime2270/homework_netology-10.1/blob/main/screenshots/job1.png)
 
-![job1.1](ссылка на скриншот 1)
+![job1.1](https://github.com/Prime2270/homework_netology-10.1/blob/main/screenshots/job1.1.png)
 
-`keepalived-1 1 noda`
+`keepalived-1, 1 noda`
 
 ```
 vrrp_instance test-yakovlev {
@@ -27,7 +27,7 @@ virtual_ipaddress {
 }
 ```
 
-`keepalived-2 2 noda`
+`keepalived-2, 2 noda`
 
 ```
 vrrp_instance test-yakovlev-1 {
