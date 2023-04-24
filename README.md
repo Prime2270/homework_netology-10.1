@@ -3,9 +3,9 @@
 
 ### Задание 1 Разверните топологию из лекции и выполните установку и настройку сервиса Keepalived
 
-![job.v2.1]()
+![job.v2.1](https://github.com/Prime2270/homework_netology-10.1/blob/main/screenshots/job.v2.1.png)
 
-![job.v2.2]()
+![job.v2.2](https://github.com/Prime2270/homework_netology-10.1/blob/main/screenshots/job.v2.2.png)
 
 `keepalived`
 
