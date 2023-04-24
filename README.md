@@ -3,50 +3,83 @@
 
 ### Задание 1 Разверните топологию из лекции и выполните установку и настройку сервиса Keepalived
 
-![job1](https://github.com/Prime2270/homework_netology-10.1/blob/main/screenshots/job1.png)
+![job.v2.1]()
 
-![job1.1](https://github.com/Prime2270/homework_netology-10.1/blob/main/screenshots/job1.1.png)
+![job.v2.2]()
 
-`keepalived-1, 1 noda`
+`keepalived`
 
 ```
-vrrp_instance test-yakovlev {
+vrrp_instance test-yakovlev-1.2 {
+
 state MASTER
+
 interface eth0
-virtual_router_id 17
+
+virtual_router_id 11
+
 priority 110
+
 advert_int 4
+
 authentication {
+
 auth_type AH
-auth_pass 1234
+
+auth_pass 1111
+
 }
+
 unicast_peer {
-10.128.0.9
+
+10.128.0.28
+
 }
+
 virtual_ipaddress {
-10.128.0.40 dev eth0 label eth0:vip
+
+10.128.0.200 dev eth0 label eth0:vip
+
 }
+
 }
 ```
 
-`keepalived-2, 2 noda`
+`keepalived-2`
 
 ```
-vrrp_instance test-yakovlev-1 {
-state BACKUP
+vrrp_instance test-yakovlev-1.2 {
+
+state MASTER
+
 interface eth0
-virtual_router_id 17
+
+virtual_router_id 11
+
 priority 110
+
 advert_int 4
+
 authentication {
+
 auth_type AH
-auth_pass 1234
+
+auth_pass 1111
+
 }
+
 unicast_peer {
-10.128.0.18
+
+10.128.0.24
+
 }
+
 virtual_ipaddress {
-10.128.0.40 dev eth0 label eth0:vip
+
+10.128.0.200 dev eth0 label eth0:vip
+
+}
+
 }
 }
 ```
